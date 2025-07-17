@@ -499,6 +499,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Jump Pad (4)
       objectReference: {fileID: 0}
+    - target: {fileID: 7692407508591925160, guid: 127b2ef6608dc5841873f5e5725a20fd, type: 3}
+      propertyPath: m_ForceMagnitude
+      value: 35
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -625,6 +629,10 @@ PrefabInstance:
     - target: {fileID: 2945827503906577480, guid: 127b2ef6608dc5841873f5e5725a20fd, type: 3}
       propertyPath: m_Name
       value: Jump Pad (5)
+      objectReference: {fileID: 0}
+    - target: {fileID: 7692407508591925160, guid: 127b2ef6608dc5841873f5e5725a20fd, type: 3}
+      propertyPath: m_ForceMagnitude
+      value: 35
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -1441,6 +1449,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Jump Pad (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 7692407508591925160, guid: 127b2ef6608dc5841873f5e5725a20fd, type: 3}
+      propertyPath: m_ForceMagnitude
+      value: 35
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1574,6 +1586,10 @@ PrefabInstance:
     - target: {fileID: 2945827503906577480, guid: 127b2ef6608dc5841873f5e5725a20fd, type: 3}
       propertyPath: m_Name
       value: Square (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 7692407508591925160, guid: 127b2ef6608dc5841873f5e5725a20fd, type: 3}
+      propertyPath: m_ForceMagnitude
+      value: 35
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -1884,6 +1900,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Jump Pad (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 7692407508591925160, guid: 127b2ef6608dc5841873f5e5725a20fd, type: 3}
+      propertyPath: m_ForceMagnitude
+      value: 35
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -2091,6 +2111,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Square (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 7692407508591925160, guid: 127b2ef6608dc5841873f5e5725a20fd, type: 3}
+      propertyPath: m_ForceMagnitude
+      value: 35
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -2158,7 +2182,7 @@ SpriteRenderer:
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
-  m_DrawMode: 0
+  m_DrawMode: 2
   m_Size: {x: 1, y: 1}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
@@ -2174,8 +2198,8 @@ Transform:
   m_GameObject: {fileID: 2079084736}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.68, y: 1.12, z: 0}
-  m_LocalScale: {x: 23.36, y: 12.308, z: 12.308}
+  m_LocalPosition: {x: 0.25, y: 0.02, z: 0}
+  m_LocalScale: {x: 24.976698, y: 10.502905, z: 10.502905}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
