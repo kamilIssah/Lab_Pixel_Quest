@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 public class Collisionscript : MonoBehaviour
 {
-    int var = 3;
+    int var = 3
     private Rigidbody2D rb;
     public int speed = 5;
     public string nextlevel = "Scene_2";
@@ -40,16 +40,15 @@ public class Collisionscript : MonoBehaviour
         {
             case "Death":
                 {
-                    string thislevel = SceneManager.GetActiveScene().name;
+                    SceneManager.LoadScene(SceneManager.GetActiveScene().name);
                     SceneManager.LoadScene(thislevel);
                     break;
                 }
             case "Finish":
                 {
-                    SceneManager.LoadScene(nextlevel);
+                    SceneManaer.LoadScene(nextlevel);
                     break;
                 }
         }
-
     }
 }

@@ -5,7 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class Reversemovement : MonoBehaviour
 {
-    int var = 3;
+    int var = 3
     private Rigidbody2D rb;
     public int speed = -5;
     public string nextlevel = "Scene_2";
@@ -35,23 +35,19 @@ public class Reversemovement : MonoBehaviour
             sr.color = Color.green;
         }
     }
-
     private void OnTriggerEnter2D(Collider2D collision)
     {
         switch (collision.tag)
         {
             case "Death":
                 {
-                    string thislevel = SceneManager.GetActiveScene().name;
+                    SceneManager.LoadScene(SceneManager.GetActiveScene().name);
                     SceneManager.LoadScene(thislevel);
                     break;
                 }
             case "Finish":
-                {
-                    SceneManager.LoadScene(nextlevel);
+                { SceneManaer.LoadScene(nextlevel);
                     break;
                 }
         }
-
-    }
 }
