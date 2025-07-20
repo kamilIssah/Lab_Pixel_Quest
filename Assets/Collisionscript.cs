@@ -2,13 +2,15 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+
 public class Collisionscript : MonoBehaviour
 {
-    int var = 3
     private Rigidbody2D rb;
     public int speed = 5;
     public string nextlevel = "Scene_2";
+    public string thislevel;
     private SpriteRenderer sr;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -21,6 +23,7 @@ public class Collisionscript : MonoBehaviour
     {
         float xInput = Input.GetAxis("Horizontal");
         rb.velocity = new Vector2(xInput * speed, rb.velocity.y);
+
         if (Input.GetKeyDown(KeyCode.Alpha1))
         {
             sr.color = Color.blue;
@@ -34,21 +37,35 @@ public class Collisionscript : MonoBehaviour
             sr.color = Color.black;
         }
     }
+
     private void OnTriggerEnter2D(Collider2D collision)
     {
         switch (collision.tag)
         {
             case "Death":
-                {
-                    SceneManager.LoadScene(SceneManager.GetActiveScene().name);
-                    SceneManager.LoadScene(thislevel);
-                    break;
-                }
+                // Reload current scene
+                SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+                break;
+
             case "Finish":
-                {
-                    SceneManaer.LoadScene(nextlevel);
-                    break;
-                }
+                LoadNextScene();
+                break;
+        }
+    }
+    void LoadNextScene()
+    {
+        int currentIndex = SceneManager.GetActiveScene().buildIndex;
+        int nextIndex = currentIndex + 1;
+        Debug.Log("Current Scene Index: " + currentIndex);
+        Debug.Log("Next Scene Index: " + nextIndex);
+
+        if (nextIndex < SceneManager.sceneCountInBuildSettings)
+        {
+            SceneManager.LoadScene(nextIndex);
+        }
+        else
+        {
+            Debug.Log("All levels complete! No more scenes to load.");
         }
     }
 }
