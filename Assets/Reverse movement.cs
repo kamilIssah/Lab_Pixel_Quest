@@ -6,7 +6,7 @@ using UnityEngine.SceneManagement;
 public class ReverseMovement : MonoBehaviour
 {
     private Rigidbody2D rb;
-    public int speed = 5;
+    public int speed = -5;
     public string nextlevel = "Scene_2";
     public string thislevel;
     private SpriteRenderer sr;
